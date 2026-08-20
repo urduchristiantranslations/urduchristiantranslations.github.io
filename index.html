@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Urdu Christian Translation</title>
+
+  <meta name="description" content="Urdu Christian Translation - Faithful, thoughtful and meaningful Christian literature in Urdu.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #101827;
+      --navy-light: #182235;
+      --gold: #c9a96e;
+      --gold-light: #e4c991;
+      --cream: #f7f3ea;
+      --white: #ffffff;
+      --text: #263040;
+      --muted: #687080;
+      --border: rgba(201, 169, 110, 0.28);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(16, 24, 39, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-container {
+      max-width: 1150px;
+      margin: auto;
+      padding: 18px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: var(--white);
+      text-decoration: none;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 25px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #e8ebf0;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-light);
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(10, 16, 27, 0.88), rgba(10, 16, 27, 0.93)),
+        radial-gradient(circle at 80% 30%, rgba(201, 169, 110, 0.20), transparent 35%),
+        var(--navy);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 25px 80px;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .small-title {
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      color: var(--white);
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(55px, 9vw, 100px);
+      font-weight: 500;
+      line-height: 0.95;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 span {
+      color: var(--gold-light);
+    }
+
+    .hero p {
+      color: #d7dce5;
+      max-width: 650px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    .hero-buttons {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 27px;
+      border-radius: 3px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .button-primary {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .button-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .button-outline {
+      border: 1px solid var(--gold);
+      color: var(--gold-light);
+    }
+
+    .button-outline:hover {
+      background: rgba(201, 169, 110, 0.1);
+    }
+
+    /* GENERAL */
+
+    section {
+      padding: 100px 25px;
+    }
+
+    .section-container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .section-heading .eyebrow {
+      color: #a27f43;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .section-heading h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 52px;
+      color: var(--navy);
+      font-weight: 600;
+      margin-top: 8px;
+    }
+
+    .section-heading p {
+      max-width: 650px;
+      margin: 10px auto 0;
+      color: var(--muted);
+    }
+
+    /* ABOUT */
+
+    .about {
+      background: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-text h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 38px;
+      color: var(--navy);
+      margin-bottom: 18px;
+    }
+
+    .about-text p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .urdu-box {
+      background: var(--navy);
+      border-left: 4px solid var(--gold);
+      padding: 35px 30px;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    .urdu-box p {
+      direction: rtl;
+      color: var(--white);
+      font-family: "Noto Nastaliq Urdu", serif;
+      font-size: 28px;
+      line-height: 2.2;
+      margin: 0;
+    }
+
+    /* BOOKS */
+
+    .books {
+      background: var(--cream);
+    }
+
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .book-card {
+      background: var(--white);
+      border: 1px solid #e5dfd2;
+      padding: 20px;
+      transition: 0.3s;
+    }
+
+    .book-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 18px 40px rgba(16, 24, 39, 0.10);
+    }
+
+    .book-cover {
+      height: 300px;
+      background:
+        linear-gradient(145deg, #192437, #0c1320);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 22px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .book-cover::after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border: 1px solid rgba(201, 169, 110, 0.35);
+      transform: rotate(45deg);
+    }
+
+    .book-cover-content {
+      position: relative;
+      z-index: 2;
+      padding: 25px;
+    }
+
+    .book-cover h3 {
+      color: var(--gold-light);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 31px;
+      line-height: 1.1;
+    }
+
+    .book-cover small {
+      display: block;
+      color: #ddd;
+      margin-top: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 9px;
+    }
+
+    .book-card h3 {
+      color: var(--navy);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 27px;
+    }
+
+    .book-card p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 7px;
+    }
+
+    /* PRINCIPLES */
+
+    .principles {
+      background: var(--navy);
+      color: white;
+    }
+
+    .principles .section-heading h2 {
+      color: white;
+    }
+
+    .principles .section-heading p {
+      color: #b9c0cc;
+    }
+
+    .principle-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .principle {
+      padding: 35px 28px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.025);
+    }
+
+    .principle-number {
+      color: var(--gold);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 40px;
+    }
+
+    .principle h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 27px;
+      margin: 10px 0;
+      color: white;
+    }
+
+    .principle p {
+      color: #b9c0cc;
+      font-size: 14px;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: white;
+      text-align: center;
+    }
+
+    .contact-box {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .contact-box h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 52px;
+      color: var(--navy);
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      margin: 15px 0 30px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #0b111c;
+      color: #aeb5c0;
+      text-align: center;
+      padding: 35px 20px;
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: var(--gold-light);
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 62px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .book-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin: auto;
+      }
+
+      .principle-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading h2,
+      .contact-box h2 {
+        font-size: 42px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <div class="nav-container">
+
+      <a href="#" class="logo">
+        Urdu Christian <span>Translation</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#books">Books</a></li>
+        <li><a href="#principles">Our Approach</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <div class="small-title">
+        Christian Literature in Urdu
+      </div>
+
+      <h1>
+        Urdu Christian<br>
+        <span>Translation</span>
+      </h1>
+
+      <p>
+        Faithful translations of Christian literature,
+        bringing meaningful books and biblical teaching
+        to Urdu-speaking readers.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#books" class="button button-primary">
+          Explore Books
+        </a>
+
+        <a href="#about" class="button button-outline">
+          Learn About Us
+        </a>
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- ABOUT -->
+
+  <section class="about" id="about">
+
+    <div class="section-container">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">Our Purpose</div>
+
+        <h2>Faithful Words. Meaningful Literature.</h2>
+
+        <p>
+          Serving Urdu-speaking readers through careful
+          and thoughtful Christian translation.
+        </p>
+
+      </div>
+
+
+      <div class="about-grid">
+
+        <div class="about-text">
+
+          <h3>Making Christian literature accessible.</h3>
+
+          <p>
+            Urdu Christian Translation exists to make
+            valuable Christian books and teaching available
+            to Urdu-speaking readers in language that is
+            clear, natural, accurate, and faithful to the
+            author's intended meaning.
+          </p>
+
+          <p>
+            Our goal is not simply to translate words,
+            but to communicate the message of each work
+            with care while respecting sound Christian
+            theological terminology.
+          </p>
+
+        </div>
+
+
+        <div class="urdu-box">
+
+          <p>
+            خُدا کے کلام اور مسیحی ادب کو
+            اُردو پڑھنے والوں تک پہنچانا
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BOOKS -->
+
+  <section class="books" id="books">
+
+    <div class="section-container">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">Library</div>
+
+        <h2>Featured Books</h2>
+
+        <p>
+          Explore our growing collection of Christian
+          books translated into Urdu.
+        </p>
+
+      </div>
+
+
+      <div class="book-grid">
+
+        <!-- BOOK 1 -->
+
+        <div class="book-card">
+
+          <div class="book-cover">
+
+            <div class="book-cover-content">
+
+              <h3>
+                Your Book<br>
+                Cover
+              </h3>
+
+              <small>
+                Urdu Translation
+              </small>
+
+            </div>
+
+          </div>
+
+          <h3>Book Title</h3>
+
+          <p>
+            Author Name · Urdu Translation
+          </p>
+
+        </div>
+
+
+        <!-- BOOK 2 -->
+
+        <div class="book-card">
+
+          <div class="book-cover">
+
+            <div class="book-cover-content">
+
+              <h3>
+                Coming<br>
+                Soon
+              </h3>
+
+              <small>
+                New Translation
+              </small>
+
+            </div>
+
+          </div>
+
+          <h3>More Books</h3>
+
+          <p>
+            Our library is growing.
+          </p>
+
+        </div>
+
+
+        <!-- BOOK 3 -->
+
+        <div class="book-card">
+
+          <div class="book-cover">
+
+            <div class="book-cover-content">
+
+              <h3>
+                Coming<br>
+                Soon
+              </h3>
+
+              <small>
+                New Translation
+              </small>
+
+            </div>
+
+          </div>
+
+          <h3>New Releases</h3>
+
+          <p>
+            More translated works will appear here.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- TRANSLATION PRINCIPLES -->
+
+  <section class="principles" id="principles">
+
+    <div class="section-container">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">Our Approach</div>
+
+        <h2>How We Translate</h2>
+
+        <p>
+          Translation requires more than replacing words.
+          It requires understanding meaning, context,
+          language, and theology.
+        </p>
+
+      </div>
+
+
+      <div class="principle-grid">
+
+        <div class="principle">
+
+          <div class="principle-number">01</div>
+
+          <h3>Faithfulness</h3>
+
+          <p>
+            We seek to preserve the author's meaning
+            without adding to or removing from the
+            original message.
+          </p>
+
+        </div>
+
+
+        <div class="principle">
+
+          <div class="principle-number">02</div>
+
+          <h3>Natural Urdu</h3>
+
+          <p>
+            We aim for Urdu that reads naturally,
+            clearly, and beautifully rather than
+            sounding like a word-for-word translation.
+          </p>
+
+        </div>
+
+
+        <div class="principle">
+
+          <div class="principle-number">03</div>
+
+          <h3>Theological Care</h3>
+
+          <p>
+            Christian theological terminology is handled
+            carefully and consistently so that important
+            concepts retain their intended meaning.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section class="contact" id="contact">
+
+    <div class="contact-box">
+
+      <div class="eyebrow">
+        Get in Touch
+      </div>
+
+      <h2>
+        Have a question?
+      </h2>
+
+      <p>
+        For questions about our translation work,
+        books, or future projects, please get in touch.
+      </p>
+
+      <a
+        href="mailto:your-email@example.com"
+        class="button button-primary">
+        Contact Us
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 <strong>Urdu Christian Translation</strong>.
+      All rights reserved.
+    </p>
+
+    <p>
+      Christian Literature · Translation · Publishing
+    </p>
+
+  </footer>
+
+
+</body>
+</html>
