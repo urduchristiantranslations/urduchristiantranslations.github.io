@@ -16,7 +16,7 @@ body{font-family:Inter,sans-serif;background:var(--cream);color:var(--text);line
 nav{position:fixed;top:0;left:0;width:100%;z-index:10;background:rgba(16,24,39,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
 .nav-container{max-width:1150px;margin:auto;padding:18px 25px;display:flex;justify-content:space-between;align-items:center}
 .logo{color:#fff;text-decoration:none;font-family:"Cormorant Garamond",serif;font-size:25px;font-weight:600}.logo span{color:var(--gold)}
-.nav-links{display:flex;gap:28px;list-style:none}.nav-links a{color:#e8ebf0;text-decoration:none;font-size:14px}.nav-links a:hover{color:var(--gold2)}
+.nav-links{display:flex;gap:28px;list-style:none}.menu-toggle{display:none;background:none;border:0;color:#fff;font-size:26px;cursor:pointer}.nav-links a{color:#e8ebf0;text-decoration:none;font-size:14px}.nav-links a:hover{color:var(--gold2)}
 .hero{min-height:90vh;background:radial-gradient(circle at 80% 30%,rgba(201,169,110,.2),transparent 35%),var(--navy);display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 25px 80px}
 .hero-content{max-width:850px}.eyebrow{color:var(--gold2);text-transform:uppercase;letter-spacing:4px;font-size:12px;font-weight:700}
 .hero h1{color:#fff;font-family:"Cormorant Garamond",serif;font-size:clamp(55px,9vw,100px);font-weight:500;line-height:.95;margin:20px 0 28px}.hero h1 span{color:var(--gold2)}
@@ -34,12 +34,13 @@ section{padding:100px 25px}.container{max-width:1100px;margin:auto}.heading{text
 .contact{background:#fff;text-align:center}.contact h2{font-family:"Cormorant Garamond",serif;font-size:54px;color:var(--navy)}.contact p{color:var(--muted);margin:15px auto 30px;max-width:650px}
 footer{background:#0b111c;color:#aeb5c0;text-align:center;padding:35px 20px;font-size:13px}footer strong{color:var(--gold2)}
 @media(max-width:950px){.book-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:800px){.nav-links{display:none}.hero h1{font-size:62px}.hero p{font-size:16px}.about-grid{grid-template-columns:1fr;gap:40px}.principle-grid{grid-template-columns:1fr}.heading h2,.contact h2{font-size:42px}}
+@media(max-width:800px){.nav-links{display:none}.menu-toggle{display:block}.nav-links.mobile-open{display:flex;position:absolute;top:100%;left:0;width:100%;background:var(--navy);flex-direction:column;padding:20px 25px;gap:18px}.hero h1{font-size:62px}.hero p{font-size:16px}.about-grid{grid-template-columns:1fr;gap:40px}.principle-grid{grid-template-columns:1fr}.heading h2,.contact h2{font-size:42px}}
 @media(max-width:520px){.book-grid{grid-template-columns:1fr;max-width:360px;margin:auto}.cover{height:480px}}
 </style>
 </head>
 <body>
 <nav><div class="nav-container">
+<button class="menu-toggle" aria-label="Open menu">☰</button>
 <a href="#" class="logo">Urdu Christian <span>Translation</span></a>
 <ul class="nav-links"><li><a href="#about">About</a></li><li><a href="#books">Books</a></li><li><a href="#principles">Our Approach</a></li><li><a href="#contact">Contact</a></li></ul>
 </div></nav>
@@ -148,4 +149,14 @@ footer{background:#0b111c;color:#aeb5c0;text-align:center;padding:35px 20px;font
   </p>
   <p>© 2026 Urdu Christian Translation. All rights reserved.</p>
 </footer>
+
+<script>
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('mobile-open');
+});
+</script>
+
 </body></html>
