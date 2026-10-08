@@ -77,6 +77,16 @@ footer{background:#0b111c;color:#aeb5c0;text-align:center;padding:35px 20px;font
 @media(max-width:950px){.book-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:800px){.nav-links{display:none}.menu-toggle{display:block}.nav-links.mobile-open{display:flex;position:absolute;top:100%;left:0;width:100%;background:var(--navy);flex-direction:column;padding:20px 25px;gap:18px}.hero h1{font-size:62px}.hero p{font-size:16px}.about-grid{grid-template-columns:1fr;gap:40px}.principle-grid{grid-template-columns:1fr}.heading h2,.contact h2{font-size:42px}}
 @media(max-width:520px){.book-grid{grid-template-columns:1fr;max-width:360px;margin:auto}.cover{height:480px}}
+.fade-on-scroll{
+  opacity:0;
+  transform:translateY(24px);
+  transition:opacity .7s ease, transform .7s ease;
+}
+
+.fade-on-scroll.fade-visible{
+  opacity:1;
+  transform:translateY(0);
+}
 </style>
 </head>
 <body>
@@ -243,5 +253,24 @@ navLinks.querySelectorAll('a').forEach(link => {
   });
 });
 </script>
+<script>
+const fadeElements = document.querySelectorAll(
+  '.section, .book-card, .service-card'
+);
 
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-visible');
+    }
+  });
+}, {
+  threshold: 0.15
+});
+
+fadeElements.forEach(element => {
+  element.classList.add('fade-on-scroll');
+  fadeObserver.observe(element);
+});
+</script>
 </body></html>
